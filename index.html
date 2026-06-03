@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>國中動物界探究學習網 - 雙主題穩定儲存版</title>
+  <title>國中七下動物界探究學習網 - 雙主題穩定儲存版</title>
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
@@ -54,54 +54,54 @@
     // 📁 關卡 1: 無脊椎動物 題庫資料
     // ==========================================
     const INVERT_CATEGORY_META = {
-      "刺絲胞": { name: "刺絲胞動物", icon: "🪼", color: "bg-cyan-50 border-cyan-300 text-cyan-800" },
-      "扁形": { name: "扁形動物", icon: "🪱", color: "bg-rose-50 border-rose-300 text-rose-800" },
+      "刺絲胞": { name: "刺絲胞動物", icon: "🪸", color: "bg-cyan-50 border-cyan-300 text-cyan-800" },
+      "扁形": { name: "扁形動物", icon: "🦠", color: "bg-rose-50 border-rose-300 text-rose-800" },
       "軟體": { name: "軟體動物", icon: "🐙", color: "bg-purple-50 border-purple-300 text-purple-800" },
-      "環節": { name: "環節動物", icon: "🐛", color: "bg-amber-50 border-amber-300 text-amber-800" },
+      "環節": { name: "環節動物", icon: "🪱", color: "bg-amber-50 border-amber-300 text-amber-800" },
       "節肢": { name: "節肢動物", icon: "🐝", color: "bg-emerald-50 border-emerald-300 text-emerald-800" },
       "棘皮": { name: "棘皮動物", icon: "⭐", color: "bg-blue-50 border-blue-300 text-blue-800" }
     };
 
     const INVERT_CARDS_DATA = [
-      { id: 'i1', text: '有刺絲胞用於捕食與防禦', target: '刺絲胞', icon: '🔫', type: 'feature' }, 
+      { id: 'i1', text: '有刺絲胞用於捕食與防禦', target: '刺絲胞', icon: '🪼', type: 'feature' }, 
       { id: 'i2', text: '身體分節、但各節形態功能不同', target: '節肢', icon: '🧱', type: 'feature' }, 
-      { id: 'i3', text: '身體扁平，多呈葉片或帶狀', target: '扁形', icon: '🍂', type: 'feature' },
+      { id: 'i3', text: '身體扁平', target: '扁形', icon: '〰️', type: 'feature' },
       { id: 'i4', text: '部分個體有保護柔軟身體的硬殼', target: '軟體', icon: '🐚', type: 'feature' }, 
-      { id: 'i5', text: '身體柔軟、通常不分節', target: '軟體', icon: '🎈', type: 'feature' }, 
-      { id: 'i6', text: '具有分節的附肢(關節)', target: '節肢', icon: '🦵', type: 'feature' }, 
+      { id: 'i5', text: '身體柔軟、通常不分節', target: '軟體', icon: '☁️', type: 'feature' }, 
+      { id: 'i6', text: '具有分節的附肢', target: '節肢', icon: '🦵', type: 'feature' }, 
       { id: 'i7', text: '體表具有堅硬的外骨骼', target: '節肢', icon: '🛡️', type: 'feature' }, 
       { id: 'i8', text: '成長過程中需要蛻皮', target: '節肢', icon: '👕', type: 'feature' }, 
       { id: 'i9', text: '體表粗糙有棘(刺)，全部海生', target: '棘皮', icon: '🌵', type: 'feature' },
-      { id: 'i10', text: '利用水管系統與「管足」運動', target: '棘皮', icon: '👣', type: 'feature' }, 
+      { id: 'i10', text: '利用「管足」運動', target: '棘皮', icon: '👣', type: 'feature' }, 
       { id: 'i11', text: '身體細長，由許多相似環狀體節組成', target: '環節', icon: '🚃', type: 'feature' },
       { id: 'e1', text: '水母 (觸手具特化刺細胞)', target: '刺絲胞', icon: '🪼', type: 'animal' },
       { id: 'e2', text: '海葵 (行固著生活捕食小魚)', target: '刺絲胞', icon: '🪸', type: 'animal' },
-      { id: 'e3', text: '渦蟲 (自由生活且再生力強)', target: '扁形', icon: '🧬', type: 'animal' },
-      { id: 'e4', text: '絛蟲 (寄生於人畜腸道的帶狀蟲)', target: '扁形', icon: '🎗️', type: 'animal' },
-      { id: 'e5', text: '蝸牛 (具外套膜與螺旋硬殼)', target: '軟體', icon: '🐚', type: 'animal' },
+      { id: 'e3', text: '渦蟲 (行斷裂生殖)', target: '扁形', icon: '➖', type: 'animal' },
+      { id: 'e4', text: '絛蟲 (寄生於人畜腸道的扁平狀蟲)', target: '扁形', icon: '🎗️', type: 'animal' },
+      { id: 'e5', text: '蝸牛 (具螺旋硬殼)', target: '軟體', icon: '🐌', type: 'animal' },
       { id: 'e6', text: '烏賊 (外殼退化至體內，游動快)', target: '軟體', icon: '🦑', type: 'animal' },
-      { id: 'e7', text: '蚯蚓 (密閉式循環的翻土助手)', target: '環節', icon: '🪱', type: 'animal' },
-      { id: 'e8', text: '水蛭 (體表濕潤、多行吸血寄生)', target: '環節', icon: '🩸', type: 'animal' },
+      { id: 'e7', text: '蚯蚓 (身體細長有環紋的翻土助手)', target: '環節', icon: '🪱', type: 'animal' },
+      { id: 'e8', text: '水蛭 (身體環狀分節、多行吸血寄生)', target: '環節', icon: '🩸', type: 'animal' },
       { id: 'e9', text: '蝗蟲 (具三對足、外骨骼的昆蟲)', target: '節肢', icon: '🦗', type: 'animal' },
       { id: 'e10', text: '螃蟹 (厚重鈣質外骨骼的甲殼類)', target: '節肢', icon: '🦀', type: 'animal' },
       { id: 'e11', text: '海星 (利用管足吸力撬開文蛤)', target: '棘皮', icon: '⭐', type: 'animal' },
-      { id: 'e12', text: '海膽 (體表長滿可動棘刺)', target: '棘皮', icon: '🦔', type: 'animal' }
+      { id: 'e12', text: '海膽 (體表長滿可動棘刺)', target: '棘皮', icon: '☀️', type: 'animal' }
     ];
 
     const INVERT_KNOWLEDGE_CARDS = [
       { name: "刺絲胞動物", text: "如珊瑚、海葵、水母。觸手上有刺絲胞，能彈出刺絲麻痺獵物，用作捕食與防禦構造。" },
-      { name: "扁形動物", text: "如渦蟲、絛蟲。身體扁平，多數無體腔，構造簡單，部分種類行寄生生活。" },
-      { name: "軟體動物", text: "如蝸牛、文蛤、烏賊。共同特徵是身體柔軟，通常具有外套膜，部分會分泌堅硬的外殼保護自己。" },
-      { name: "環節動物", text: "如蚯蚓、水蛭。身體由許多相似的體節（環節）相連組成，體表通常裸露且濕潤。" },
-      { name: "節肢動物", text: "如昆蟲、蜘蛛、蝦蟹。特徵為身體分節、具分節附肢與外骨骼，外殼不能隨身體長大，需定期蛻皮。" },
-      { name: "棘皮動物", text: "如海星、海膽。全部生活在海洋中，體表具有棘刺，擁有獨特的水管系統，末端突出形成管足。" }
+      { name: "扁形動物", text: "如渦蟲、絛蟲。身體扁平，構造簡單，利於擴散作用進行交換物質。部分種類行寄生生活。" },
+      { name: "軟體動物", text: "如蝸牛、文蛤、烏賊。共同特徵是身體柔軟，部分會有堅硬的外殼保護自己。" },
+      { name: "環節動物", text: "如蚯蚓、水蛭。身體由許多相似的體節（環節）相連組成。" },
+      { name: "節肢動物", text: "如昆蟲、蜘蛛、蝦蟹。特徵為身體分節、具分節附肢與外骨骼，外骨骼不能隨身體長大，需定期蛻皮。" },
+      { name: "棘皮動物", text: "如海星、海膽、海參。全部生活在海洋中，體表具有棘刺，擁有獨特管足協助移動和攝食。" }
     ];
 
     const INVERT_QUIZ_DATA = [
       { id: 'iq1', question: "珊瑚、海葵和水母屬於哪一門動物？", options: ["軟體動物門", "刺絲胞動物門", "棘皮動物門", "節肢動物門"], answer: 1, explanation: "珊瑚、海葵和水母都具有觸手，觸手上有刺絲胞，用於捕食和防禦，屬於刺絲胞動物門。" },
-      { id: 'iq2', question: "渦蟲和絛蟲的身體扁平，沒有明顯的體腔，牠們屬於？", options: ["扁形動物門", "環節動物門", "線形動物門", "刺絲胞動物門"], answer: 0, explanation: "渦蟲與絛蟲身體扁平，多呈葉片狀或帶狀，屬於扁形動物門。" },
+      { id: 'iq2', question: "渦蟲和絛蟲的身體扁平，沒有明顯的體腔，牠們屬於？", options: ["扁形動物門", "環節動物門", "節肢動物門", "刺絲胞動物門"], answer: 0, explanation: "渦蟲與絛蟲身體扁平，多呈葉片狀或帶狀，屬於扁形動物門。" },
       { id: 'iq3', question: "蝸牛、蛤蜊和烏賊雖然外觀差異大，但牠們都屬於軟體動物。下列何者是牠們共同特徵？", options: ["都有堅硬的殼", "身體分節", "身體柔軟", "具有管足"], answer: 2, explanation: "軟體動物的共同特徵是身體柔軟。並非所有軟體動物都有外殼（如烏賊的殼退化在體內）。" },
-      { id: 'iq4', question: "蚯蚓和水蛭的身體由許多相似的體節組成，牠們屬於？", options: ["節肢動物門", "扁形動物門", "線形動物門", "環節動物門"], answer: 3, explanation: "蚯蚓和水蛭的身體細長，由許多相似的環狀體節組成，屬於環節動物門。" },
+      { id: 'iq4', question: "蚯蚓和水蛭的身體由許多相似的體節組成，牠們屬於？", options: ["節肢動物門", "扁形動物門", "節肢動物門", "環節動物門"], answer: 3, explanation: "蚯蚓和水蛭的身體細長，由許多相似的環狀體節組成，屬於環節動物門。" },
       { id: 'iq5', question: "動物界中種類最多、數量最龐大的是哪一門？", options: ["軟體動物門", "節肢動物門", "脊索動物門", "環節動物門"], answer: 1, explanation: "節肢動物門包含昆蟲、蜘蛛、蝦蟹等，是動物界中種類和數量最多的一門。" },
       { id: 'iq6', question: "節肢動物成長過程中，為何需要「蛻皮」？", options: ["為了改變體色", "為了更換呼吸器官", "因外骨骼無法隨身體長大而延伸", "為了適應從水生到陸生"], answer: 2, explanation: "節肢動物具有堅硬的外骨骼，雖然有保護作用，但無法隨內部身體成長，因此必須定期脫去舊殼才能長大。" },
       { id: 'iq7', question: "海星、海膽和海參屬於棘皮動物門，牠們主要生活在哪裡？", options: ["淡水環境", "全部生活在海洋中", "陸地潮濕處", "寄生在其他動物體內"], answer: 1, explanation: "棘皮動物門的成員全部都是海生（海洋生物），沒有淡水或陸生物種。" },
@@ -363,7 +363,7 @@
           {userRole === 'login' && (
             <div className="max-w-md mx-auto mt-16 bg-white p-6 rounded-2xl shadow-xl border border-slate-200">
               <h2 className="text-xl md:text-2xl font-black text-center text-emerald-600 mb-6 flex items-center justify-center gap-2">
-                <span>🧬</span> 國中生物探究學習網 3.2
+                <span>🧬</span> 國中生物七下動物界學習網
               </h2>
               <div className="space-y-4 mb-6">
                 <div>
@@ -375,7 +375,7 @@
                 <div className="grid grid-cols-3 gap-2">
                   <div>
                     <label className="block text-xs font-bold text-slate-500 mb-1">座號</label>
-                    <input type="number" placeholder="5" value={studentSeat} onChange={e => setStudentSeat(e.target.value)} className="w-full border p-2 rounded-lg font-bold outline-none focus:border-emerald-500" />
+                    <input type="number" placeholder="數字" value={studentSeat} onChange={e => setStudentSeat(e.target.value)} className="w-full border p-2 rounded-lg font-bold outline-none focus:border-emerald-500" />
                   </div>
                   <div className="col-span-2">
                     <label className="block text-xs font-bold text-slate-500 mb-1">學生姓名</label>
@@ -404,10 +404,10 @@
                 >
                   <div className="text-3xl mb-2">🪼</div>
                   <h3 className="text-lg font-black text-slate-800">
-                    3-6 無脊椎動物門 
+                    3-6(1) 無脊椎動物 
                     {config.invertebrateOpen ? <span className="text-sm font-bold text-emerald-600 ml-1">🟢開放中</span> : <span className="text-sm font-bold text-slate-400 ml-1">🔒未開放</span>}
                   </h3>
-                  <p className="text-xs text-slate-400 mt-1">包含刺絲胞、扁形、軟體、環節、節肢、棘皮動物。</p>
+                  <p className="text-xs text-slate-400 mt-1">包含刺絲胞動物門、扁形動物門、軟體動物門、環節動物門、節肢動物門、棘皮動物門。</p>
                 </button>
 
                 <button 
@@ -416,10 +416,10 @@
                 >
                   <div className="text-3xl mb-2">🐟</div>
                   <h3 className="text-lg font-black text-slate-800">
-                    3-6 脊椎動物亞門 
+                    3-6(2) 脊椎動物 
                     {config.vertebrateOpen ? <span className="text-sm font-bold text-emerald-600 ml-1">🟢開放中</span> : <span className="text-sm font-bold text-slate-400 ml-1">🔒未開放</span>}
                   </h3>
-                  <p className="text-xs text-slate-400 mt-1">包含魚類、兩生類、爬蟲類、鳥類、哺乳類動物。</p>
+                  <p className="text-xs text-slate-400 mt-1">包含脊索動物門，有魚類、兩生類、爬蟲類、鳥類、哺乳類。</p>
                 </button>
               </div>
             </div>
@@ -434,9 +434,9 @@
               </div>
               <div className="grid grid-cols-4 bg-slate-100 rounded-xl p-1 mb-6 gap-1 font-bold text-xs md:text-sm text-center">
                 <button onClick={() => setActiveTab('knowledge')} className={`py-2 rounded-lg ${activeTab === 'knowledge' ? 'bg-white text-emerald-600 shadow-sm' : 'text-slate-500'}`}>💡 知識補給站</button>
-                <button onClick={() => setActiveTab('matching')} className={`py-2 rounded-lg ${activeTab === 'matching' ? 'bg-white text-emerald-600 shadow-sm' : 'text-slate-500'}`}>🧠 圖片化配對 ({matchedCards.length}/{totalCardsCount})</button>
+                <button onClick={() => setActiveTab('matching')} className={`py-2 rounded-lg ${activeTab === 'matching' ? 'bg-white text-emerald-600 shadow-sm' : 'text-slate-500'}`}>🧠 特徵配對碰 ({matchedCards.length}/{totalCardsCount})</button>
                 <button onClick={() => setActiveTab('quiz')} className={`py-2 rounded-lg ${activeTab === 'quiz' ? 'bg-white text-emerald-600 shadow-sm' : 'text-slate-500'}`}>📝 實戰測驗 ({answeredCount}/10)</button>
-                <button onClick={() => setActiveTab('result')} className={`py-2 rounded-lg ${activeTab === 'result' ? 'bg-white text-emerald-600 shadow-sm' : 'text-slate-500'}`}>📊 本次報告單</button>
+                <button onClick={() => setActiveTab('result')} className={`py-2 rounded-lg ${activeTab === 'result' ? 'bg-white text-emerald-600 shadow-sm' : 'text-slate-500'}`}>📊 本次練習結算</button>
               </div>
 
               {/* TAB 1: 💡 知識補給站 */}
@@ -451,12 +451,12 @@
                     ))}
                   </div>
                   <div className="mt-6 bg-amber-50 border border-amber-200 p-4 rounded-xl text-center">
-                    <p className="font-bold text-amber-800 text-sm">💡 熟讀上方基礎核心觀念後，點擊上方切換至「🧠 圖片化配對」展開探究實作！</p>
+                    <p className="font-bold text-amber-800 text-sm">💡 熟讀上方基礎核心觀念後，點擊上方切換至「🧠 特徵配對碰」展開探究實作！</p>
                   </div>
                 </div>
               )}
 
-              {/* TAB 2: 🧠 圖片化配對 */}
+              {/* TAB 2: 🧠 特徵配對碰 */}
               {activeTab === 'matching' && (
                 <div>
                   <div className="mb-4 bg-slate-50 p-3 rounded-xl border flex flex-col md:flex-row items-center justify-between gap-2">
@@ -579,7 +579,7 @@
                   {isQuizSubmitted ? (
                     <div className="space-y-4">
                       <div className="grid grid-cols-2 gap-2 text-xs">
-                        <div className="bg-white p-3 rounded-xl border"><p className="text-slate-400 font-bold">🧩 卡牌配對分</p><p className="text-xl font-black text-emerald-600">{matchScore} 分</p></div>
+                        <div className="bg-white p-3 rounded-xl border"><p className="text-slate-400 font-bold">🧩 特徵配對分</p><p className="text-xl font-black text-emerald-600">{matchScore} 分</p></div>
                         <div className="bg-white p-3 rounded-xl border"><p className="text-slate-400 font-bold">📝 實戰測驗分</p><p className="text-xl font-black text-blue-600">{finalQuizScore} 分</p></div>
                       </div>
                       <div className="bg-emerald-600 text-white p-4 rounded-xl shadow-sm">
