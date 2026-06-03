@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>國中動物界探究學習網 - 修正回歸穩定版</title>
+  <title>國中動物界探究學習網 - 雙主題穩定儲存版</title>
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
@@ -103,7 +103,7 @@
       { id: 'iq3', question: "蝸牛、蛤蜊和烏賊雖然外觀差異大，但牠們都屬於軟體動物。下列何者是牠們共同特徵？", options: ["都有堅硬的殼", "身體分節", "身體柔軟", "具有管足"], answer: 2, explanation: "軟體動物的共同特徵是身體柔軟。並非所有軟體動物都有外殼（如烏賊的殼退化在體內）。" },
       { id: 'iq4', question: "蚯蚓和水蛭的身體由許多相似的體節組成，牠們屬於？", options: ["節肢動物門", "扁形動物門", "線形動物門", "環節動物門"], answer: 3, explanation: "蚯蚓和水蛭的身體細長，由許多相似的環狀體節組成，屬於環節動物門。" },
       { id: 'iq5', question: "動物界中種類最多、數量最龐大的是哪一門？", options: ["軟體動物門", "節肢動物門", "脊索動物門", "環節動物門"], answer: 1, explanation: "節肢動物門包含昆蟲、蜘蛛、蝦蟹等，是動物界中種類和數量最多的一門。" },
-      { id: 'iq6', question: "節肢動物成長過程中，為何需要「蛻皮」？", options: ["為了改變體色", "為了更換呼吸器官", "因外骨骼無法隨身體長大而延伸", "為了適應從水生到陸生"], answer: 2, explanation: "節肢動物具有堅硬的外骨骼，雖然有保護作用，但無法隨內部身體成長，因此必須定期脫去舊殼才能長大。" },
+      { id: 'iq6', question: "節肢動物成長過程中，為何需要「蛻皮」？", options: ["目的特化體色", "為了更換呼吸器官", "因外骨骼無法隨身體長大而延伸", "為了適應從水生到陸生"], answer: 2, explanation: "節肢動物具有堅硬的外骨骼，雖然有保護作用，但無法隨內部身體成長，因此必須定期脫去舊殼才能長大。" },
       { id: 'iq7', question: "海星、海膽和海參屬於棘皮動物門，牠們主要生活在哪裡？", options: ["淡水環境", "全部生活在海洋中", "陸地潮濕處", "寄生在其他動物體內"], answer: 1, explanation: "棘皮動物門的成員全部都是海生（海洋生物），沒有淡水或陸生物種。" },
       { id: 'iq8', question: "海星用來移動和捕食的特殊構造稱為？", options: ["觸手", "附肢", "管足", "纖毛"], answer: 2, explanation: "棘皮動物（如海星）具有獨特的水管系統，其末端突出體表形成「管足」，用於運動與攝食。" },
       { id: 'iq9', question: "下列哪一種動物「不」屬於節肢動物？", options: ["螞蟻", "蜘蛛", "螃蟹", "蚯蚓"], answer: 3, explanation: "螞蟻、蜘蛛、螃蟹都具有外骨骼和分節的附肢，皆屬於節肢動物。蚯蚓則屬於環節動物。" },
@@ -154,8 +154,8 @@
 
     const VERT_QUIZ_DATA = [
       { id: 'vq1', question: "下列關於魚類特徵的敘述，何者「錯誤」？", options: ["皆生活在水中且用鰓呼吸", "全部種類都是卵生動物", "心臟構造為一心房一心室", "屬於外溫(變溫)動物"], answer: 1, explanation: "多數魚類為卵生，但也有特例像是大肚魚、孔雀魚、部分鯊魚屬於「卵胎生」（受精卵在母體內發育孵化後才產出）。" },
-      { id: 'vq2', question: "青蛙和山椒魚屬於兩生類，牠們為什麼不能完全離開陰暗潮濕的環境？", options: ["開為牠們只會用鰓呼吸", "因為牠們的體表沒有防止水分散失的構造，且肺不發達需靠濕潤皮膚輔助呼吸", "因為牠們是內溫動物", "因為牠們只吃水中的昆蟲"], answer: 1, explanation: "兩生類體表裸露沒有鱗片或毛髮阻擋水分散失，且成體肺部發育不完全，高度依賴濕潤的皮膚來進行氣體交換，因此無法離開潮濕環境。" },
-      { id: 'vq3', question: "蜥蜴、蛇和烏龜比青蛙更能適應乾燥的陸地生活，最關鍵的構造是？", options: ["體表具有角質鱗片或骨板", "心臟具有兩心房兩心室", "四肢變得更加粗壯", "改用皮膚進行呼吸"], answer: 0, explanation: "爬蟲類體表具有角質鱗片 or 骨板，能有效防止體內水分蒸散，這是牠們能完全征服陸地、適應乾燥環境的關鍵構造。" },
+      { id: 'vq2', question: "青蛙和山椒魚屬於兩生類，牠們為什麼不能完全離開陰暗潮濕的環境？", options: ["因為牠們只會用鰓呼吸", "因為牠們的體表沒有防止水分散失的構造，且肺不發達需靠濕潤皮膚輔助呼吸", "因為牠們是內溫動物", "因為牠們只吃水中的昆蟲"], answer: 1, explanation: "兩生類體表裸露沒有鱗片或毛髮阻擋水分散失，且成體肺部發育不完全，高度依賴濕潤的皮膚來進行氣體交換，因此無法離開潮濕環境。" },
+      { id: 'vq3', question: "蜥蜴、蛇和烏龜比青蛙更能適應乾燥的陸地生活，最關鍵的構造是？", options: ["體表具有角質鱗片或骨板", "心臟具有兩心房兩心室", "四肢變得更加粗壯", "改用皮膚進行呼吸"], answer: 0, explanation: "爬蟲類體表具有角質鱗片或骨板，能有效防止體內水分蒸散，這是牠們能完全征服陸地、適應乾燥環境的關鍵構造。" },
       { id: 'vq4', question: "鳥類的骨骼具有「中空、輕盈」的特徵，這在演化上的主要適應意義為何？", options: ["方便產下體型較大的卵", "降低體溫以適應高空環境", "減輕體重以利於飛行", "增加骨髓儲存脂肪的空間"], answer: 2, explanation: "鳥類骨骼中空且質輕，配上流線型體型與特化的羽毛、氣囊，都是為了減輕體重、提高飛行效率的演化適應。" },
       { id: 'vq5', question: "蝙蝠會飛，鯨魚生活在海裡。請問牠們在分類上屬於哪一類動物？", options: ["蝙蝠是鳥類，鯨魚是魚類", "蝙蝠是哺乳類，鯨魚是魚類", "蝙蝠是鳥類，鯨魚是哺乳類", "兩者皆屬於哺乳類"], answer: 3, explanation: "蝙蝠與鯨魚雖然外觀與生活環境不同，但牠們都具備「胎生、哺乳、體表有毛髮（初生時）」的特徵，皆屬於哺乳類。" },
       { id: 'vq6', question: "脊椎動物中，屬於「內溫動物(恆溫)」的組合是？", options: ["鳥類、哺乳類", "魚類、兩生類、爬蟲類", "爬蟲類、鳥類", "兩生類、哺乳類"], answer: 0, explanation: "鳥類和哺乳類能靠體內代謝產生熱量並維持恆定的體溫，屬於內溫動物；魚類、兩生類、爬蟲類則會隨環境改變體溫，為外溫動物。" },
@@ -183,10 +183,15 @@
       const [gameMode, setGameMode] = useState('invert');
       const [activeTab, setActiveTab] = useState('knowledge');
       
-      // 📑 雲端核心開關狀態 (預設皆開啟以防資料讀取延遲)
-      const [config, setConfig] = useState({ invertebrateOpen: true, vertebrateOpen: true });
+      // 📑 教師暫存開關狀態
+      const [config, setConfig] = useState({ invertebrateOpen: true, vertebrateOpen: false });
       const [studentScores, setStudentScores] = useState([]); 
-      
+      const [refreshTrigger, setRefreshTrigger] = useState(0); 
+
+      // 🔍 老師後台專用的篩選功能欄位
+      const [teacherFilterClass, setTeacherFilterClass] = useState('ALL'); // 預設顯示全部班級
+      const [teacherSortMode, setTeacherSortMode] = useState('time'); // time=時間, seat=座號
+
       const [wrongCount, setWrongCount] = useState(0); 
       const [isQuizSubmitted, setIsQuizSubmitted] = useState(false);
       const [userQuizAnswers, setUserQuizAnswers] = useState({});     
@@ -203,7 +208,6 @@
       const totalCardsCount = currentCardsData.length;
       const categoryKeys = Object.keys(currentMeta);
 
-      // 🔄 還原原本玩法：物件池自由打散，可任選卡牌進行配對
       const poolCards = useMemo(() => {
         const remaining = currentCardsData.filter(f => !matchedCards.some(m => m.id === f.id));
         return shuffleArray(remaining);
@@ -216,35 +220,57 @@
         return Math.max(0, Math.min(100, score));
       }, [matchedCards, wrongCount, gameMode]);
 
-      // 🔄 即時配置監聽（修正3穩定版：防重置、不干擾）
+      // 🔄 即時讀取資料庫配置
       useEffect(() => {
         const unsubscribe = db.collection('artifacts').doc(appId).collection('public').doc('config')
           .onSnapshot((doc) => { 
             if (doc.exists) {
               const data = doc.data();
-              setConfig(prev => ({
-                invertebrateOpen: data.invertebrateOpen !== undefined ? data.invertebrateOpen : prev.invertebrateOpen,
-                vertebrateOpen: data.vertebrateOpen !== undefined ? data.vertebrateOpen : prev.vertebrateOpen
-              })); 
+              setConfig({
+                invertebrateOpen: data.invertebrateOpen !== undefined ? data.invertebrateOpen : true,
+                vertebrateOpen: data.vertebrateOpen !== undefined ? data.vertebrateOpen : false
+              }); 
             }
-          }, (err) => console.log("讀取設定失敗:", err));
+          }, (err) => console.log(err));
         return () => unsubscribe();
       }, []);
 
-      // 🔄 即時學生成績監聽（修正1穩定版：自動即時跳出交卷）
+      // 🔄 即時接聽學生成績變動
       useEffect(() => {
-        const unsubscribeScores = db.collection('artifacts').doc(appId).collection('student_scores')
-          .orderBy('timestamp', 'desc')
-          .onSnapshot((snapshot) => {
-            const scoresData = [];
-            snapshot.forEach((doc) => { 
-              scoresData.push({ id: doc.id, ...doc.data() }); 
-            });
-            setStudentScores(scoresData);
-          }, (err) => console.error("讀取成績失敗:", err));
+        if (userRole === 'teacher_admin') {
+          const unsubscribeScores = db.collection('artifacts').doc(appId).collection('student_scores')
+            .orderBy('timestamp', 'desc')
+            .onSnapshot((snapshot) => {
+              const scoresData = [];
+              snapshot.forEach((doc) => { scoresData.push({ id: doc.id, ...doc.data() }); });
+              setStudentScores(scoresData);
+            }, (err) => console.error("讀取失敗:", err));
+          return () => unsubscribeScores();
+        }
+      }, [userRole, refreshTrigger]);
 
-        return () => unsubscribeScores();
-      }, []);
+      // 🎛️ 老師後台經過「篩選欄位」與「排序規則」處理後的最終列表 [cite: 131, 132]
+      const processedScores = useMemo(() => {
+        let list = [...studentScores];
+        
+        // 1. 班級篩選 [cite: 154]
+        if (teacherFilterClass !== 'ALL') {
+          list = list.filter(item => item.class === teacherFilterClass);
+        }
+        
+        // 2. 排序規則
+        if (teacherSortMode === 'seat') {
+          // 依座號由小到大排列（先比班級再比座號） [cite: 154]
+          list.sort((a, b) => {
+            if (a.class !== b.class) return a.class.localeCompare(b.class);
+            return Number(a.seat) - Number(b.seat);
+          });
+        } else {
+          // 預設：依交卷順序排列（Firebase 排序好戳過來最前，不需特別重排或由新到舊維持原樣）
+          // 這裡確保依最新時間降序
+        }
+        return list;
+      }, [studentScores, teacherFilterClass, teacherSortMode]);
 
       const startChapter = (mode) => {
         setGameMode(mode);
@@ -314,6 +340,7 @@
           
           setFinalQuizScore(calculatedQuizScore);
           setIsQuizSubmitted(true); 
+          setActiveTab('quiz');     
 
           const calculatedTotal = Math.round((matchScore * 0.6) + (calculatedQuizScore * 0.4));
           db.collection('artifacts').doc(appId).collection('student_scores').add({
@@ -329,7 +356,6 @@
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
           }).then(() => {
             alert('🎉 評分成功！作答報告已解鎖，成績已同步傳送至老師後台。');
-            setActiveTab('result'); // 交卷成功後引導至報告單
           }).catch((err) => {
             console.warn('雲端同步提示:', err.message);
           });
@@ -342,7 +368,7 @@
           vertebrateOpen: config.vertebrateOpen
         }, { merge: true })
         .then(() => {
-          alert("💾 儲存成功！設定已同步生效！");
+          alert("💾 設定已成功同步存入雲端！學生端介面已即時生效！");
         })
         .catch(err => {
           alert("❌ 儲存失敗，請檢查網路連線：" + err.message);
@@ -356,7 +382,7 @@
           {userRole === 'login' && (
             <div className="max-w-md mx-auto mt-16 bg-white p-6 rounded-2xl shadow-xl border border-slate-200">
               <h2 className="text-xl md:text-2xl font-black text-center text-emerald-600 mb-6 flex items-center justify-center gap-2">
-                <span>🧬</span> 國中生物探究學習網 3.2
+                <span>🧬</span> 國中生物探究學習網 3.3
               </h2>
               <div className="space-y-4 mb-6">
                 <div>
@@ -410,8 +436,7 @@
                 <button onClick={() => { if(!isQuizSubmitted && !window.confirm("你尚未交卷，現在離開進度會不見唷！確定離開嗎？")) return; setUserRole('student_home'); }} className="text-xs bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-lg font-bold text-slate-600">⬅️ 返回主選單</button>
                 <span className="text-xs font-bold bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full">🎯 當前單元：{gameMode === 'invert'?'無脊椎動物':'脊椎動物'} | 學生：{studentClass}班{studentSeat}號【{studentName}】</span>
               </div>
-
-              {/* 分頁控制 */}
+              
               <div className="grid grid-cols-4 bg-slate-100 rounded-xl p-1 mb-6 gap-1 font-bold text-xs md:text-sm text-center">
                 <button onClick={() => setActiveTab('knowledge')} className={`py-2 rounded-lg ${activeTab === 'knowledge' ? 'bg-white text-emerald-600 shadow-sm' : 'text-slate-500'}`}>💡 知識補給站</button>
                 <button onClick={() => setActiveTab('matching')} className={`py-2 rounded-lg ${activeTab === 'matching' ? 'bg-white text-emerald-600 shadow-sm' : 'text-slate-500'}`}>🧠 圖片化配對 ({matchedCards.length}/{totalCardsCount})</button>
@@ -422,102 +447,63 @@
               {/* TAB 1: 💡 知識補給站 */}
               {activeTab === 'knowledge' && (
                 <div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {currentKnowledge.map((k, idx) => (
-                      <div key={idx} className="border border-slate-100 rounded-xl p-4 bg-slate-50/50 hover:shadow-md transition">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl">{Object.values(currentMeta)[idx]?.icon || '🧬'}</span>
-                          <h4 className="font-black text-slate-700">{k.name}</h4>
-                        </div>
-                        <p className="text-xs text-slate-500 leading-relaxed font-medium">{k.text}</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    {currentKnowledge.map((card, i) => (
+                      <div key={i} className="border border-slate-200 bg-slate-50 p-4 rounded-xl">
+                        <h4 className="font-black text-emerald-600 border-b pb-1.5 mb-2 text-base flex items-center gap-1.5">🎯 {card.name}</h4>
+                        <p className="text-xs text-slate-600 leading-relaxed font-medium">{card.text}</p>
                       </div>
                     ))}
                   </div>
-                  <div className="mt-8 text-center bg-emerald-50 p-4 rounded-xl border border-emerald-100 max-w-md mx-auto">
-                    <p className="text-xs font-bold text-emerald-800 mb-2">💡 溫馨提醒</p>
-                    <p className="text-[11px] text-emerald-600 font-medium leading-relaxed mb-3">熟讀上列各類群的核心生物構造特徵後，即可點選上方切換至「圖片化配對」與「實戰測驗」開始大顯身手！</p>
-                    <button onClick={() => setActiveTab('matching')} className="bg-emerald-500 text-white font-bold text-xs px-4 py-2 rounded-lg shadow hover:bg-emerald-600 transition">前往圖卡配對 🚀</button>
+                  <div className="mt-8 bg-emerald-50 rounded-xl p-4 text-center border border-emerald-100">
+                    <p className="font-bold text-emerald-800 text-sm">💡 溫馨提醒：複習好觀念後，請點擊上方切換至「🧠 圖片化配對」與「📝 實戰測驗」開始作答！</p>
                   </div>
                 </div>
               )}
 
               {/* TAB 2: 🧠 圖片化配對 */}
               {activeTab === 'matching' && (
-                <div className="space-y-6">
-                  <div className="bg-amber-50 border border-amber-200 text-amber-900 rounded-xl p-3 text-xs font-bold leading-relaxed flex items-start gap-2">
-                    <span>💡</span>
-                    <div>
-                      <p>操作指引：1. 先在下方「待分類物件池」中點選任一張卡牌。 2. 接著在下方點選該特徵/生物所屬的「正確動物類群箱子」即可完成歸類！</p>
-                      <p className="text-rose-600 mt-1">⚠️ 每次分類錯誤扣 1 分（加權前）。本關配對成績：{matchScore} 分。</p>
-                    </div>
+                <div>
+                  <div className="bg-slate-50 p-3 rounded-xl border text-center mb-4">
+                    <span className="text-xs font-bold text-slate-500 block sm:inline">📊 配對階段計分規則：</span>
+                    <span className="text-xs bg-blue-100 text-blue-700 font-bold px-2 py-0.5 rounded ml-1">配對正確得基本分</span>
+                    <span className="text-xs bg-rose-100 text-rose-700 font-bold px-2 py-0.5 rounded ml-1">每答錯一次扣 1 分</span>
+                    <div className="text-base font-black text-emerald-600 mt-1">目前預估得分：{matchScore} 分 / 答錯次數：{wrongCount} 次</div>
                   </div>
 
-                  {/* 還原原本好玩的物件池玩法：自由點選不設限 */}
-                  <div className="bg-slate-50 border border-dashed border-slate-300 rounded-xl p-4">
-                    <div className="text-xs font-black text-slate-400 mb-2 flex justify-between items-center">
-                      <span>📥 待分類物件池</span>
-                      {poolCards.length === 0 && <span className="text-emerald-600 font-bold">🎉 太棒了！全部物件皆已分類完畢！</span>}
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-2 justify-center min-h-[80px] items-center">
-                      {poolCards.length > 0 ? (
-                        poolCards.map((card) => {
-                          const isSelected = selectedCard?.id === card.id;
-                          const isError = errorCardId === card.id;
-                          return (
-                            <button
-                              key={card.id}
-                              disabled={isQuizSubmitted}
-                              onClick={() => setSelectedCard(card)}
-                              className={`p-2 rounded-xl border font-bold text-xs transition duration-150 text-left flex items-center gap-1.5 shadow-sm cursor-pointer
-                                ${card.type === 'feature' ? 'bg-amber-100 border-amber-300 text-amber-900' : 'bg-blue-100 border-blue-300 text-blue-900'}
-                                ${isSelected ? 'ring-4 ring-emerald-500 scale-105 border-transparent shadow-lg' : ''}
-                                ${isError ? 'animate-shake bg-rose-200 border-rose-400 text-rose-900' : ''}
-                              `}
-                            >
-                              <span className="text-base">{card.icon}</span>
-                              <span className="leading-tight text-[11px]">{card.text}</span>
-                            </button>
-                          );
-                        })
-                      ) : (
-                        <div className="text-center text-slate-400 text-xs font-bold py-4">✨ 完美歸類！請前往下一分頁。</div>
-                      )}
-                    </div>
+                  <div className="min-h-[110px] bg-slate-100 border-2 border-dashed border-slate-300 rounded-2xl p-4 flex flex-wrap gap-3 justify-center items-center mb-6">
+                    {poolCards.length === 0 ? (
+                      <div className="text-center py-2">
+                        <p className="text-emerald-600 font-black text-lg">🎉 恭喜！所有生物卡牌已全數分類完畢！</p>
+                        <p className="text-xs text-slate-400 mt-0.5">請繼續前往「實戰測驗」分頁作答唷！</p>
+                      </div>
+                    ) : (
+                      poolCards.slice(0, 1).map((card) => {
+                        const isSelected = selectedCard?.id === card.id;
+                        const isError = errorCardId === card.id;
+                        return (
+                          <div key={card.id} onClick={() => { if(!isQuizSubmitted) setSelectedCard(isSelected ? null : card); }} className={`p-4 rounded-xl shadow-md border-2 max-w-sm cursor-pointer transition transform active:scale-95 text-center select-none ${isError ? 'bg-rose-100 border-rose-500 text-rose-700 animate-shake' : isSelected ? 'bg-amber-100 border-amber-500 text-amber-800 scale-105 ring-4 ring-amber-300' : 'bg-white border-slate-200 hover:border-slate-400'}`}>
+                            <div className="text-4xl mb-2">{card.icon}</div>
+                            <div className="font-bold text-sm md:text-base">{card.text}</div>
+                            <div className="mt-2 text-[10px] bg-slate-100 text-slate-500 inline-block px-2 py-0.5 rounded-full font-bold">{card.type === 'feature'?'🔍 構造特徵':'🐾 生物實例'}</div>
+                          </div>
+                        );
+                      })
+                    )}
                   </div>
 
-                  {/* 六大分類接收箱子 */}
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  <div className="text-center text-xs font-black text-slate-400 mb-3 flex items-center justify-center gap-1">
+                    <span>👇 請點選下方合適的分類籃，將上方卡牌投進去 👇</span>
+                  </div>
+
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
                     {categoryKeys.map((key) => {
-                      const meta = currentMeta[key];
-                      const boxMatches = matchedCards.filter(m => m.target === key);
+                      const countInBox = matchedCards.filter(m => m.target === key).length;
                       return (
-                        <div
-                          key={key}
-                          onClick={() => handleBoxClick(key)}
-                          className={`border-2 rounded-2xl p-4 min-h-[140px] flex flex-col justify-between transition group shadow-sm
-                            ${selectedCard ? 'cursor-pointer hover:border-emerald-500 hover:bg-emerald-50/20 bg-white border-slate-200' : 'bg-white border-slate-100'}
-                          `}
-                        >
-                          <div className="flex justify-between items-center border-b pb-2 mb-2">
-                            <div className="flex items-center gap-1.5">
-                              <span className="text-xl">{meta.icon}</span>
-                              <span className="font-black text-sm text-slate-700">{meta.name}</span>
-                            </div>
-                            <span className="text-[10px] font-black bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded-full">已收納 {boxMatches.length}</span>
-                          </div>
-
-                          <div className="flex-1 custom-scrollbar overflow-y-auto max-h-[100px] space-y-1 pr-1">
-                            {boxMatches.map(m => (
-                              <div key={m.id} className="text-[10px] font-bold bg-slate-50 border border-slate-100 p-1 rounded flex items-center gap-1 text-slate-600">
-                                <span>{m.icon}</span>
-                                <span className="truncate">{m.text.split(' (')[0]}</span>
-                              </div>
-                            ))}
-                            {boxMatches.length === 0 && (
-                              <div className="h-full flex items-center justify-center text-[11px] text-slate-300 font-bold border border-dashed border-slate-100 rounded py-4">等候置入...</div>
-                            )}
-                          </div>
+                        <div key={key} onClick={() => handleBoxClick(key)} className={`p-4 rounded-2xl border-2 text-center transition cursor-pointer select-none active:scale-95 flex flex-col justify-between ${selectedCard ? 'hover:scale-[1.03] hover:shadow-md' : ''} ${currentMeta[key].color}`}>
+                          <div className="text-3xl mb-1">{currentMeta[key].icon}</div>
+                          <div className="font-black text-sm">{currentMeta[key].name}</div>
+                          <div className="text-[10px] mt-2 font-mono bg-white/60 py-0.5 rounded-full font-bold">已收納: {countInBox}</div>
                         </div>
                       );
                     })}
@@ -527,61 +513,46 @@
 
               {/* TAB 3: 📝 實戰測驗 */}
               {activeTab === 'quiz' && (
-                <div className="space-y-6 max-w-3xl mx-auto">
-                  <div className="bg-blue-50 border border-blue-200 text-blue-900 rounded-xl p-3 text-xs font-bold leading-relaxed flex items-start gap-2">
-                    <span>📝</span>
-                    <div>
-                      <p>作答說明：共 10 題選擇題，每題 10 分。點選下方選項即可作答。完成後請滑到最下方點擊「確認交卷對答案」。</p>
-                      {isQuizSubmitted && <p className="text-emerald-700 mt-1">📊 測驗已結束。本單元實戰得分：{finalQuizScore} 分。</p>}
-                    </div>
+                <div>
+                  <div className="bg-slate-50 p-3 rounded-xl border text-center mb-6">
+                    <span className="text-xs font-bold text-slate-500">📝 實戰題目計分：一共 10 題選擇題，每題 10 分。比例佔總分 40%。</span>
+                    {isQuizSubmitted && <div className="text-lg font-black text-blue-600 mt-1">測驗部分最終得分：{finalQuizScore} 分</div>}
                   </div>
 
-                  <div className="space-y-4">
+                  <div className="space-y-6 max-h-[50vh] overflow-y-auto pr-2 custom-scrollbar">
                     {currentQuizData.map((q, idx) => {
-                      const selectedOpt = userQuizAnswers[q.id];
+                      const chosenIdx = userQuizAnswers[q.id];
                       return (
-                        <div key={q.id} className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
-                          <h4 className="font-black text-sm text-slate-800 mb-3 flex items-start gap-1.5">
-                            <span className="bg-slate-100 text-slate-600 text-[10px] px-1.5 py-0.5 rounded font-mono">Q{idx+1}</span>
-                            <span className="leading-tight">{q.question}</span>
+                        <div key={q.id} className={`p-4 rounded-xl border ${isQuizSubmitted ? (chosenIdx === q.answer ? 'bg-emerald-50/40 border-emerald-200' : 'bg-rose-50/40 border-rose-200') : 'bg-white border-slate-200'}`}>
+                          <h4 className="font-bold text-sm md:text-base mb-3 flex items-start gap-1">
+                            <span className="bg-slate-200 text-slate-700 text-xs px-1.5 py-0.5 rounded font-mono mt-0.5">Q{idx+1}</span>
+                            <span>{q.question}</span>
                           </h4>
-
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                             {q.options.map((opt, oIdx) => {
-                              const isCurrentSelected = selectedOpt === oIdx;
-                              let btnClass = "border border-slate-200 bg-white text-slate-600 hover:bg-slate-50";
-                              
-                              if (isCurrentSelected) {
-                                btnClass = "border-2 border-blue-500 bg-blue-50 text-blue-700 font-bold shadow-sm";
-                              }
-                              if (isQuizSubmitted) {
+                              let btnStyle = "border-slate-200 bg-white text-slate-700 hover:bg-slate-50";
+                              if (!isQuizSubmitted && chosenIdx === oIdx) {
+                                btnStyle = "border-emerald-500 bg-emerald-50 text-emerald-700 font-bold ring-2 ring-emerald-300";
+                              } else if (isQuizSubmitted) {
                                 if (oIdx === q.answer) {
-                                  btnClass = "border-2 border-emerald-500 bg-emerald-50 text-emerald-800 font-bold";
-                                } else if (isCurrentSelected && selectedOpt !== q.answer) {
-                                  btnClass = "border-2 border-rose-400 bg-rose-50 text-rose-700 font-bold line-through";
+                                  btnStyle = "border-emerald-500 bg-emerald-500 text-white font-bold shadow-sm";
+                                } else if (chosenIdx === oIdx && chosenIdx !== q.answer) {
+                                  btnStyle = "border-rose-400 bg-rose-400 text-white line-through";
                                 } else {
-                                  btnClass = "opacity-40 bg-white text-slate-400 cursor-not-allowed";
+                                  btnStyle = "border-slate-100 bg-slate-50 text-slate-400 opacity-60";
                                 }
                               }
-
                               return (
-                                <button
-                                  key={oIdx}
-                                  disabled={isQuizSubmitted}
-                                  onClick={() => handleSelectQuizOption(q.id, oIdx)}
-                                  className={`p-2.5 rounded-lg text-xs text-left transition duration-150 flex items-center gap-2 ${btnClass}`}
-                                >
-                                  <span className="w-5 h-5 rounded-full bg-slate-100 border text-[10px] flex items-center justify-center font-mono font-bold shrink-0">{String.fromCharCode(65 + oIdx)}</span>
-                                  <span className="leading-tight">{opt}</span>
+                                <button key={oIdx} onClick={() => handleSelectQuizOption(q.id, oIdx)} className={`p-2.5 rounded-lg border text-left text-xs md:text-sm transition flex items-center gap-2 ${btnStyle}`}>
+                                  <span className="w-5 h-5 rounded-full bg-black/5 flex items-center justify-center text-[11px] font-bold font-mono">{(oIdx+1)}</span>
+                                  <span>{opt}</span>
                                 </button>
                               );
                             })}
                           </div>
-
-                          {/* 題目詳解析 */}
                           {isQuizSubmitted && (
-                            <div className="mt-3 bg-slate-50 border border-slate-200 rounded-lg p-2.5 text-[11px] leading-relaxed text-slate-600 font-medium">
-                              <span className="font-black text-emerald-700 mr-1">💡 觀念解析：</span>{q.explanation}
+                            <div className="mt-3 text-xs bg-white/80 p-2.5 rounded-lg border border-dashed text-slate-600 leading-relaxed font-medium">
+                              💡 <span className="font-bold text-slate-700">解析說明：</span>{q.explanation}
                             </div>
                           )}
                         </div>
@@ -589,146 +560,136 @@
                     })}
                   </div>
 
-                  {/* 🎯 【修正2：交卷大按鈕重回實戰測驗最下方】 */}
-                  <div className="text-center pt-4">
-                    {!isQuizSubmitted ? (
-                      <button onClick={submitScoresToFirebase} className="w-full max-w-md bg-emerald-500 text-white font-bold py-3.5 rounded-xl hover:bg-emerald-600 shadow-lg transition text-sm tracking-wide">
-                        🏁 填寫完畢，正式「交卷對答案」
-                      </button>
-                    ) : (
-                      <div className="text-xs bg-emerald-50 border border-emerald-200 text-emerald-800 p-3 rounded-xl font-bold inline-block">
-                        🟢 已成功交卷！您可以點選上方「📊 本次報告單」分頁查看加權總分。
-                      </div>
-                    )}
-                  </div>
+                  {!isQuizSubmitted && (
+                    <div className="mt-8 text-center border-t pt-4">
+                      <button onClick={submitScoresToFirebase} className="bg-emerald-500 text-white text-base font-black px-8 py-3 rounded-xl hover:bg-emerald-600 shadow-lg transform active:scale-95 transition">🗳️ 檢查完畢，確認交卷對答案</button>
+                    </div>
+                  )}
                 </div>
               )}
 
               {/* TAB 4: 📊 本次報告單 */}
               {activeTab === 'result' && (
                 <div className="max-w-md mx-auto text-center py-6">
-                  <div className="bg-slate-50 border rounded-2xl p-6 shadow-inner mb-6">
-                    <div className="text-4xl mb-2">🏆</div>
-                    <h3 className="text-base font-black text-slate-700 mb-4">即時學習成果綜合結算</h3>
-                    
-                    <div className="space-y-3 font-bold text-xs max-w-xs mx-auto text-left">
-                      <div className="flex justify-between border-b pb-1.5">
-                        <span className="text-slate-500">關卡配對成績 (加權 60%)</span>
-                        <span className="text-amber-600">{matchScore} 分</span>
-                      </div>
-                      <div className="flex justify-between border-b pb-1.5">
-                        <span className="text-slate-500">實戰測驗成績 (加權 40%)</span>
-                        <span className="text-blue-600">{isQuizSubmitted ? `${finalQuizScore} 分` : '尚未交卷'}</span>
-                      </div>
-                      <div className="flex justify-between pt-1 text-sm">
-                        <span className="text-slate-800 font-black">🌟 本單元最終總得分</span>
-                        <span className="text-emerald-700 font-black text-base">{isQuizSubmitted ? `${finalTotalScore} 分` : '等待交卷後計算'}</span>
-                      </div>
+                  {!isQuizSubmitted ? (
+                    <div className="p-8 border border-dashed rounded-2xl bg-slate-50">
+                      <div className="text-4xl mb-2">🔒</div>
+                      <h3 className="font-bold text-slate-700 mb-1">作答報告單尚未解鎖</h3>
+                      <p className="text-xs text-slate-400">請先將「配對卡牌」全數分類，並「測驗作答完畢」後，點擊實戰測驗分頁最下方的交卷按鈕。</p>
                     </div>
-                  </div>
-
-                  {isQuizSubmitted && (
-                    <div className="space-y-3">
-                      <button onClick={() => { setSeed(prev => prev + 1); startChapter(gameMode); }} className="bg-slate-700 text-white font-bold text-xs px-4 py-2 rounded-lg hover:bg-slate-800 transition">
-                        🔄 再次挑戰本單元 (洗牌卡牌)
-                      </button>
+                  ) : (
+                    <div className="bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200 p-6 rounded-2xl shadow-inner">
+                      <div className="text-5xl mb-3">🏆</div>
+                      <h3 className="text-xl font-black text-slate-800 mb-4">科學探究任務完成報告</h3>
+                      
+                      <div className="space-y-2 text-left bg-white p-4 rounded-xl border mb-4 font-bold text-xs md:text-sm text-slate-600">
+                        <div className="flex justify-between border-b pb-1.5"><span>班級座號姓名：</span><span className="text-slate-800">{studentClass}班 {studentSeat}號 {studentName}</span></div>
+                        <div className="flex justify-between border-b pb-1.5"><span>探究單元進度：</span><span className="text-slate-800">{gameMode === 'invert'?'無脊椎動物':'脊椎動物'}</span></div>
+                        <div className="flex justify-between border-b pb-1.5"><span>🧠 配對分數 (佔60%)：</span><span className="text-emerald-600">{matchScore} 分</span></div>
+                        <div className="flex justify-between border-b pb-1.5"><span>📝 測驗分數 (佔40%)：</span><span className="text-blue-600">{finalQuizScore} 分</span></div>
+                        <div className="flex justify-between pt-1 text-base font-black"><span>總合成績評分：</span><span className="text-emerald-700">{finalTotalScore} 分</span></div>
+                      </div>
+                      <p className="text-[11px] text-slate-400 font-medium">🎉 做的太棒了！妳的精彩數據已經即時傳上雲端，老師已經能在後台看到妳的精湛表現囉！可以關閉網頁了。</p>
                     </div>
-                  )}
-                  {!isQuizSubmitted && (
-                    <p className="text-xs font-bold text-slate-400">⚠️ 請先完成「實戰測驗」分頁並點擊最下方的交卷按鈕，才能查看總成績報告唷！</p>
                   )}
                 </div>
               )}
+
             </div>
           )}
 
-          {/* ================= 教師管理後台介面 ================= */}
+          {/* ================= 教師管理後台 ================= */}
           {userRole === 'teacher_admin' && (
-            <div className="max-w-5xl mx-auto bg-white p-4 md:p-6 rounded-2xl shadow-xl border border-slate-200">
-              <div className="flex flex-col sm:flex-row justify-between items-center border-b pb-4 mb-6 gap-2">
-                <div>
-                  <h2 className="text-xl font-black text-slate-800 flex items-center gap-2">
-                    <span>🛠️</span> 雲端數位教學管理後台
-                  </h2>
-                  <p className="text-[11px] font-bold text-slate-400 mt-0.5">控制學生端的章節練習權限，並即時查閱交卷數據</p>
+            <div className="max-w-6xl mx-auto pt-4">
+              <div className="flex flex-col sm:flex-row justify-between items-center mb-6 bg-white p-4 rounded-xl shadow-sm border border-slate-200 gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="bg-emerald-100 p-2 rounded-lg text-emerald-600 text-xl">👩‍🏫</div>
+                  <div>
+                    <h1 className="text-lg md:text-xl font-black text-slate-800">生物老師專屬雲端即時後台</h1>
+                    <p className="text-xs text-slate-400 font-medium">可即時控管各班學生單元開關，並接收全校學生作答數據</p>
+                  </div>
                 </div>
-                <button onClick={() => setUserRole('login')} className="bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-lg text-xs font-bold text-slate-600">退出後台</button>
+                <button onClick={() => { setUserRole('login'); }} className="text-xs font-bold bg-slate-100 text-slate-600 px-4 py-2 rounded-lg hover:bg-slate-200 transition">退出後台</button>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 
-                {/* 權限控制面板 */}
-                <div className="border border-slate-200 p-4 rounded-xl bg-slate-50/50 space-y-4">
-                  <h3 className="text-sm font-black text-slate-700 border-b pb-2 flex items-center gap-1">
-                    <span>📡</span> 課程開放狀態控制
-                  </h3>
-                  
+                {/* 左側：單元進度開關控制 */}
+                <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 h-fit">
+                  <h3 className="font-black text-sm text-slate-700 mb-3 flex items-center gap-1">⚙️ 控管單元開放狀態</h3>
                   <div className="space-y-3">
-                    <div className="flex justify-between items-center bg-white p-3 rounded-lg border">
+                    <div className="flex items-center justify-between p-3 bg-slate-50 rounded-lg border">
                       <div>
-                        <span className="text-xs font-bold text-slate-700 block">3-6 無脊椎動物門</span>
-                        <span className="text-[10px] text-slate-400 font-semibold">刺絲胞、節肢、棘皮門等</span>
+                        <div className="text-xs font-bold text-slate-700">3-6 無脊椎動物門</div>
+                        <div className="text-[10px] text-slate-400">刺絲胞、軟體、節肢、棘皮等</div>
                       </div>
-                      <input 
-                        type="checkbox" 
-                        checked={config.invertebrateOpen} 
-                        onChange={e => setConfig({ ...config, invertebrateOpen: e.target.checked })} 
-                        className="w-4 h-4 accent-emerald-500 cursor-pointer"
-                      />
+                      <input type="checkbox" checked={config.invertebrateOpen} onChange={e => setConfig(prev => ({ ...prev, invertebrateOpen: e.target.checked }))} className="w-4 h-4 accent-emerald-500 cursor-pointer" />
                     </div>
 
-                    <div className="flex justify-between items-center bg-white p-3 rounded-lg border">
+                    <div className="flex items-center justify-between p-3 bg-slate-50 rounded-lg border">
                       <div>
-                        <span className="text-xs font-bold text-slate-700 block">3-6 脊椎動物亞門</span>
-                        <span className="text-[10px] text-slate-400 font-semibold">魚類、兩生、爬蟲、鳥、哺乳</span>
+                        <div className="text-xs font-bold text-slate-700">3-6 脊椎動物亞門</div>
+                        <div className="text-[10px] text-slate-400">魚類、兩生、爬蟲、鳥類、哺乳</div>
                       </div>
-                      <input 
-                        type="checkbox" 
-                        checked={config.vertebrateOpen} 
-                        onChange={e => setConfig({ ...config, vertebrateOpen: e.target.checked })} 
-                        className="w-4 h-4 accent-emerald-500 cursor-pointer"
-                      />
+                      <input type="checkbox" checked={config.vertebrateOpen} onChange={e => setConfig(prev => ({ ...prev, vertebrateOpen: e.target.checked }))} className="w-4 h-4 accent-emerald-500 cursor-pointer" />
                     </div>
                   </div>
-
-                  <button 
-                    onClick={saveConfigToFirebase} 
-                    className="w-full bg-emerald-600 text-white font-bold py-2.5 rounded-lg hover:bg-emerald-700 shadow transition text-xs flex items-center justify-center gap-1"
-                  >
-                    <span>💾</span> 儲存設定並同步至雲端
-                  </button>
+                  
+                  <button onClick={saveConfigToFirebase} className="w-full mt-4 bg-emerald-500 text-white font-bold py-2 rounded-lg hover:bg-emerald-600 transition text-xs shadow">💾 儲存並即時更新學生端頁面</button>
                 </div>
 
-                {/* 學生表現即時數據庫 */}
-                <div className="md:col-span-2 border border-slate-200 p-4 rounded-xl bg-white space-y-3">
-                  <div className="flex justify-between items-center border-b pb-2">
-                    <h3 className="text-sm font-black text-slate-700 flex items-center gap-1">
-                      <span>📊</span> 學生成績即時看板 <span className="text-[10px] bg-red-100 text-red-600 px-1.5 py-0.5 rounded font-black animate-pulse">LIVE 即時同步中</span>
+                {/* 右側：學生成績即時接收看板 */}
+                <div className="lg:col-span-2 bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                  
+                  {/* ✨✨ 新增的控制工具列 ✨✨ */}
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-3 mb-3 gap-2">
+                    <h3 className="font-black text-sm text-slate-700 flex items-center gap-1">
+                      <span>📊 學生交卷即時戰報</span>
+                      <span className="bg-slate-100 text-slate-600 text-xs px-2 py-0.5 rounded-full font-mono">目前總共: {studentScores.length} 筆資料</span>
                     </h3>
-                    <span className="text-[10px] font-bold text-slate-400">當前累計交卷：{studentScores.length} 筆</span>
+                    
+                    {/* 🎛️ 班級篩選下拉選單與排序按鈕 */}
+                    <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto text-xs font-bold">
+                      <div className="flex items-center gap-1 bg-slate-50 px-2 py-1.5 rounded-lg border">
+                        <span className="text-slate-400 text-[11px]">篩選班級:</span>
+                        <select value={teacherFilterClass} onChange={e => setTeacherFilterClass(e.target.value)} className="bg-transparent font-bold text-slate-700 outline-none cursor-pointer">
+                          <option value="ALL">全部班級</option>
+                          {CLASS_OPTIONS.map(c => <option key={c} value={c}>{c} 班</option>)}
+                        </select>
+                      </div>
+
+                      <div className="flex items-center bg-slate-100 p-0.5 rounded-lg border">
+                        <button onClick={() => setTeacherSortMode('time')} className={`px-2.5 py-1 rounded-md transition ${teacherSortMode === 'time' ? 'bg-white text-emerald-600 shadow-sm font-black' : 'text-slate-500'}`}>
+                          ⏱️ 依交卷時間
+                        </button>
+                        <button onClick={() => setTeacherSortMode('seat')} className={`px-2.5 py-1 rounded-md transition ${teacherSortMode === 'seat' ? 'bg-white text-emerald-600 shadow-sm font-black' : 'text-slate-500'}`}>
+                          🔢 依座號排序
+                        </button>
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="overflow-x-auto custom-scrollbar border rounded-xl max-h-[360px]">
-                    <table className="w-full text-left border-collapse text-xs">
-                      <thead>
-                        <tr className="bg-slate-100 text-slate-600 font-bold border-b">
-                          <th className="p-2.5">單元名稱</th>
+                  <div className="overflow-x-auto max-h-[55vh] custom-scrollbar border rounded-xl">
+                    <table className="w-full text-xs text-left">
+                      <thead className="bg-slate-50 text-slate-500 uppercase font-bold border-b sticky top-0 z-10">
+                        <tr>
+                          <th className="p-2.5">進度單元</th>
                           <th className="p-2.5">班級</th>
                           <th className="p-2.5">座號</th>
                           <th className="p-2.5">姓名</th>
-                          <th className="p-2.5">配對分</th>
-                          <th className="p-2.5">測驗分</th>
-                          <th className="p-2.5 bg-emerald-50/50">總得分</th>
+                          <th className="p-2.5">配對分 (60%)</th>
+                          <th className="p-2.5">測驗分 (40%)</th>
+                          <th className="p-2.5 bg-emerald-50/50">總成績</th>
                           <th className="p-2.5">交卷時間</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        {studentScores.length === 0 ? (
-                          <tr><td colSpan="8" className="p-8 text-center text-slate-400 font-bold">🪹 目前尚無任何學生交卷資料，學生交卷後此處將自動更新。</td></tr>
+                      <tbody className="divide-y font-medium text-slate-700">
+                        {processedScores.length === 0 ? (
+                          <tr><td colSpan="8" className="p-8 text-center text-slate-400 font-bold">🪹 目前尚無符合篩選條件的交卷資料。</td></tr>
                         ) : (
-                          studentScores.map((score) => (
-                            <tr key={score.id} className="hover:bg-slate-50 border-b last:border-0 transition">
-                              <td className="p-2.5 font-black text-slate-600"><span className="bg-slate-100 px-1.5 py-0.5 rounded">{score.chapterName}</span></td>
+                          processedScores.map((score) => (
+                            <tr key={score.id} className="hover:bg-slate-50 transition">
+                              <td className="p-2.5 font-black text-slate-600"><span className="bg-slate-100 px-1.5 py-0.5 rounded">{score.chapterName || '無脊椎動物'}</span></td>
                               <td className="p-2.5 font-bold text-emerald-600">{score.class}班</td>
                               <td className="p-2.5 text-slate-500">{score.seat} 號</td>
                               <td className="p-2.5 font-bold">{score.name}</td>
@@ -743,7 +704,6 @@
                     </table>
                   </div>
                 </div>
-
               </div>
             </div>
           )}
