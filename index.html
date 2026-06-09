@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>國中動物界探究學習網 - 雙主題穩定儲存進度版</title>
+  <title>國中動物界探究學習網 - 教師後台分頁篩選版</title>
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
@@ -196,16 +196,16 @@
     ];
 
     const VERT_QUIZ_DATA = [
-      { id: 'vq1', question: "[鯊魚、魟魚]與[吳郭魚、彈塗魚]同屬魚類，牠們最主要的構造差異是？", options: ["呼吸器官不同", "尾鰭方向不同", "骨骼有軟骨與硬骨的分別", "受精方式不同"], answer: 2, explanation: "鯊魚與魟魚屬於軟骨魚綱，骨骼全為軟骨；吳郭魚與彈塗魚則屬於硬骨魚綱，骨骼主要由硬骨組成。" },
+      { id: 'vq1', question: "鯊魚、魟魚與吳郭魚、彈塗魚同屬魚類，牠們最主要的體內構造差異是？", options: ["呼吸器官不同", "心臟房室數目不同", "骨骼有軟骨與硬骨的分別", "受精方式不同"], answer: 2, explanation: "鯊魚與魟魚屬於軟骨魚綱，骨骼全為軟骨；吳郭魚與彈塗魚則屬於硬骨魚綱，骨骼主要由硬骨組成。" },
       { id: 'vq2', question: "青蛙和山椒魚屬於兩生類，牠們為什麼不能完全離開陰暗潮濕的環境？", options: ["因為牠們完全用鰓呼吸", "因為牠們的皮膚無法防止水分散失，且肺不發達需靠濕潤皮膚輔助呼吸", "因為牠們是內溫動物", "因為牠們只吃水中的昆蟲"], answer: 1, explanation: "兩生類體表裸露沒有鱗片或毛髮阻擋水分散失，且成體肺部發育不完全，高度依賴濕潤的皮膚來進行氣體交換，因此無法離開潮濕環境。" },
-      { id: 'vq3', question: "蜥蜴、蛇和烏龜比青蛙更能適應乾燥的陸地生活，最關鍵的特徵是？", options: ["體表具有鱗片或骨板防水分散失", "有牙齒可以掠食", "四肢變得更加粗壯", "改用皮膚進行呼吸"], answer: 0, explanation: "爬蟲類體表具有角質鱗片或骨板，能有效防止體內水分蒸散，這是牠們能完全征服陸地、適應乾燥環境的關鍵構造。" },
+      { id: 'vq3', question: "蜥蜴、蛇和烏龜比青蛙更能適應乾燥的陸地生活，最關鍵的特徵是？", options: ["體表具有鱗片或骨板防水分散失", "心臟具有兩心房兩心室", "四肢變得更加粗壯", "改用皮膚進行呼吸"], answer: 0, explanation: "爬蟲類體表具有角質鱗片或骨板，能有效防止體內水分蒸散，這是牠們能完全征服陸地、適應乾燥環境的關鍵構造。" },
       { id: 'vq4', question: "鳥類的骨骼具有「中空、輕盈」的特徵，這在演化上的主要適應意義為何？", options: ["方便產下體型較大的卵", "降低體溫以適應高空環境", "減輕體重以利於飛行", "增加骨髓儲存脂肪的空間"], answer: 2, explanation: "鳥類骨骼中空且質輕，配上流線型體型與特化的羽毛、氣囊，都是為了減輕體重、提高飛行效率的演化適應。" },
       { id: 'vq5', question: "蝙蝠會飛，海豚生活在海裡。請問牠們在分類上屬於哪一類動物？", options: ["蝙蝠是鳥類，海豚是魚類", "蝙蝠是哺乳類，海豚是魚類", "蝙蝠是鳥類，海豚是哺乳類", "兩者皆屬於哺乳類"], answer: 3, explanation: "蝙蝠與海豚雖然外觀與生活環境不同，但牠們都具備「胎生、哺乳、體表有毛、分泌乳汁」的特徵，皆屬於哺乳類。" },
       { id: 'vq6', question: "脊椎動物中，屬於「內溫動物(恆溫)」的組合是？", options: ["鳥類、哺乳類", "魚類、兩生類、爬蟲類", "爬蟲類、鳥類", "兩生類、哺乳類"], answer: 0, explanation: "鳥類和哺乳類能靠體內代謝產生熱量並維持恆定的體溫，屬於內溫動物；魚類、兩生類、爬蟲類則會隨環境改變體溫，為外溫動物。" },
       { id: 'vq7', question: "鴨嘴獸和針鼴雖然會「產卵」(卵生)，但科學家仍將牠們歸類為「哺乳類」的原因是？", options: ["體溫是變溫動物", "牠們具有羽毛構造", "牠們具有乳腺，會分泌乳汁哺育幼兒", "體生活在陸地上"], answer: 2, explanation: "哺乳類最核心的定義特徵是「具備乳腺能哺乳」。鴨嘴獸與針鼴是演化上最原始的哺乳類，雖然卵生，但仍用乳汁哺育後代。" },
       { id: 'vq8', question: "下列哪一種生物屬於兩生類、且「終生保有尾巴」？", options: ["青蛙", "山椒魚", "壁虎", "海龜"], answer: 1, explanation: "山椒魚屬於兩生類中的「有尾目」，成體依然保有尾巴。青蛙屬於無尾目；壁虎和烏龜則是爬蟲類。" },
-      { id: 'vq9', question: "關於鳥類的敘述，下列敘述何者錯誤？", options: ["前肢特化為翼", "全部都會飛", "卵生", "肺部有氣囊"], answer: 1, explanation: "有些鳥不會飛，例如企鵝、鴕鳥。" },
-      { id: 'vq10', question: "關於動物界的敘述，下列何者正確？", options: ["動物界生物皆為多細胞", "可分為無脊椎動物門和脊椎動物門", "草履蟲、變形蟲屬於扁形動物門", "捕蠅草會吃蟲，也屬於動物界"], answer: 0, explanation: "無脊椎動物是一個類別，包含刺絲胞動物門、棘皮動物門、軟體動物門等沒有脊椎骨的生物。草履蟲和變形蟲是原生生物界的原生動物。捕蠅草屬植物界" }
+      { id: 'vq9', question: "關於鳥類「氣囊」的功能，下列敘述何者正確？", options: ["可以代替肺進行氣體交換", "能儲存空氣輔助呼吸，並在飛行時幫助散熱與減輕比重", "用來消化未磨碎的穀物", "是用來發出聲音的鳴叫構造"], answer: 1, explanation: "鳥類的氣囊不直接進行氣體交換，但能儲存空氣讓肺部在吸氣與呼氣時都能獲得氧氣（雙重呼吸），並協助散熱與減輕比重。" },
+      { id: 'vq10', question: "海龜、海豚、海馬三種生活在海中的脊椎動物，其分類由演化先到後依序為？", options: ["魚類 ➔ 爬蟲類 ➔ 哺乳類", "爬蟲類 ➔ 哺乳類 ➔ 魚類", "魚類 ➔ 哺乳類 ➔ 爬蟲類", "哺乳類 ➔ 爬蟲類 ➔ 魚類"], answer: 0, explanation: "海馬是用鰓呼吸的硬骨「魚類」；海龜是用肺呼吸、有骨板的「爬蟲類」；海豚則是胎生哺乳的「哺乳類」，故依演化順序為魚類➔爬蟲類➔哺乳類。" }
     ];
 
     function App() {
@@ -217,6 +217,9 @@
       const [gameMode, setGameMode] = useState('invert');
       const [activeTab, setActiveTab] = useState('knowledge');
       const [vertSubTab, setVertSubTab] = useState('feature');
+
+      // ⚙️ 新增教師後台專用分頁標籤：'invert_scores' (無脊椎榜) 或 'vert_scores' (脊椎榜)
+      const [teacherTab, setTeacherTab] = useState('invert_scores');
 
       const [config, setConfig] = useState({ invertebrateOpen: true, vertebrateOpen: true });
       const [studentScores, setStudentScores] = useState([]); 
@@ -272,10 +275,16 @@
         }
       }, [matchedCards, vertMatchedFeatures, vertMatchedAnimals, wrongCount, gameMode]);
 
+      // 📊 核心邏輯：先篩選單元分頁，再篩選班級
       const filteredScores = useMemo(() => {
-        if (teacherSelectClass === 'ALL') return studentScores;
-        return studentScores.filter(score => score.class === teacherSelectClass);
-      }, [studentScores, teacherSelectClass]);
+        // 1. 先依據目前選取的主題分頁進行過濾
+        const targetChapter = teacherTab === 'invert_scores' ? '無脊椎動物' : '脊椎動物';
+        let step1 = studentScores.filter(score => score.chapterName === targetChapter);
+        
+        // 2. 再依據下拉選單選定的班級過濾
+        if (teacherSelectClass === 'ALL') return step1;
+        return step1.filter(score => score.class === teacherSelectClass);
+      }, [studentScores, teacherTab, teacherSelectClass]);
 
       // 🔄 Firebase 配置監聽
       useEffect(() => {
@@ -323,7 +332,6 @@
         setActiveTab('knowledge');
         setSeed(prev => prev + 1);
 
-        // 從 Firebase 搜尋該名學生是否有未完成的存檔
         const docId = `${studentClass}_${studentSeat}_${studentName}_${mode}`;
         db.collection('artifacts').doc(appId).collection('student_drafts').doc(docId).get()
           .then((doc) => {
@@ -394,7 +402,6 @@
           setSelectedVertAnimal(null);
           setSeed(prev => prev + 1);
           
-          // 同步刪除雲端暫存檔
           const docId = `${studentClass}_${studentSeat}_${studentName}_${gameMode}`;
           db.collection('artifacts').doc(appId).collection('student_drafts').doc(docId).delete().catch(()=>{});
           alert('🔄 遊戲已初始化，卡牌已重新打亂！開始吧！');
@@ -510,7 +517,6 @@
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
           }).then(() => {
             alert('🎉 評分成功！成績已傳送至老師後台。快手同學可以點擊上方「重新開始挑戰」重複刷分喔！');
-            // 清除已完成的暫存檔
             const docId = `${studentClass}_${studentSeat}_${studentName}_${gameMode}`;
             db.collection('artifacts').doc(appId).collection('student_drafts').doc(docId).delete().catch(()=>{});
           }).catch((err) => console.warn(err.message));
@@ -524,7 +530,7 @@
           {userRole === 'login' && (
             <div className="max-w-md mx-auto mt-16 bg-white p-6 rounded-2xl shadow-xl border border-slate-200">
               <h2 className="text-xl md:text-2xl font-black text-center text-emerald-600 mb-6 flex items-center justify-center gap-2">
-                <span>🧬</span> 國中生物探究學習網 3.5
+                <span>🧬</span> 國中生物動物界探究學習網
               </h2>
               <div className="space-y-4 mb-6">
                 <div>
@@ -563,7 +569,7 @@
                   className={`p-5 rounded-xl border-2 text-left bg-white shadow-sm transition ${config.invertebrateOpen ? 'border-amber-400 hover:scale-[1.02]' : 'border-slate-200 opacity-60'}`}
                 >
                   <div className="text-3xl mb-2">🪼</div>
-                  <h3 className="text-lg font-black text-slate-800">3-6 無脊椎動物(類)</h3>
+                  <h3 className="text-lg font-black text-slate-800">3-6 無脊椎動物門</h3>
                   <p className="text-xs text-slate-400 mt-1">包含刺絲胞、扁形、軟體、環節、節肢、棘皮動物。</p>
                 </button>
 
@@ -572,8 +578,8 @@
                   className={`p-5 rounded-xl border-2 text-left bg-white shadow-sm transition ${config.vertebrateOpen ? 'border-blue-400 hover:scale-[1.02]' : 'border-slate-200 opacity-60'}`}
                 >
                   <div className="text-3xl mb-2">🐟</div>
-                  <h3 className="text-lg font-black text-slate-800">3-6 脊索動物門</h3>
-                  <p className="text-xs text-slate-400 mt-1">包含魚類、兩生類、爬蟲類、鳥類、哺乳類。</p>
+                  <h3 className="text-lg font-black text-slate-800">3-6 脊椎動物亞門</h3>
+                  <p className="text-xs text-slate-400 mt-1">包含特徵分類實作與 23 種線上圖片探索遊戲。</p>
                 </button>
               </div>
             </div>
@@ -675,13 +681,9 @@
                     <button onClick={() => setVertSubTab('animal')} className={`px-4 py-2 rounded-full border transition ${vertSubTab === 'animal' ? 'bg-blue-500 text-white border-blue-500 shadow' : 'bg-white text-slate-600'}`}>二、動物實例分類 ({vertMatchedAnimals.length}/23)</button>
                   </div>
 
-                  {/* 遊戲 A：構造特徵配對面板 */}
+                  {/* 構造特徵配對面板 */}
                   {vertSubTab === 'feature' && (
                     <div>
-                      <div className="bg-amber-50/60 p-3 rounded-xl text-xs text-amber-800 mb-4 font-bold border border-amber-200">
-                        🎯 玩法說明：點選下方任一特徵卡牌（選定後會變色），再點選下方 5 個類別方盒，即可將特徵歸類。放錯會放不進去，並提示再試一次且會扣分！
-                      </div>
-
                       {shuffledVertFeatures.length > 0 ? (
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mb-6">
                           {shuffledVertFeatures.map(card => (
@@ -733,13 +735,9 @@
                     </div>
                   )}
 
-                  {/* 遊戲 B：動物類別分類面板 */}
+                  {/* 動物類別分類面板 */}
                   {vertSubTab === 'animal' && (
                     <div>
-                      <div className="bg-blue-50/60 p-3 rounded-xl text-xs text-blue-800 mb-4 font-bold border border-blue-200">
-                        🎯 玩法說明：每次顯示一張動物圖片。點選圖片區使其變色選定，再點擊下方 6 個分類盒進行歸類。歸類正確才會更換下一張圖片！
-                      </div>
-
                       {poolVertAnimals.length > 0 ? (
                         <div className="max-w-xs mx-auto bg-slate-50 p-4 rounded-2xl border-2 border-dashed mb-6 text-center shadow-inner flex flex-col items-center">
                           <button
@@ -755,7 +753,7 @@
                                 alt={poolVertAnimals[0].name}
                                 className="w-full h-full object-contain relative z-10 block"
                                 onError={(e) => { 
-                                  e.target.src = `https://lh3.googleusercontent.com/d/$${poolVertAnimals[0].rawId}`;
+                                  e.target.src = `https://lh3.googleusercontent.com/d/$$${poolVertAnimals[0].rawId}`;
                                 }}
                               />
                               <span className="absolute inset-0 flex items-center justify-center text-slate-400 text-xs font-bold bg-slate-50">[ 圖片加載中... ]</span>
@@ -764,12 +762,12 @@
                           </button>
                           
                           <a 
-                            href={`https://lh3.googleusercontent.com/d/$${poolVertAnimals[0].rawId}`} 
+                            href={`https://lh3.googleusercontent.com/d/$$${poolVertAnimals[0].rawId}`} 
                             target="_blank" 
                             rel="noreferrer"
                             className="mt-2 text-[11px] text-blue-600 underline font-bold hover:text-blue-800"
                           >
-                            🔍 學校網路若阻擋圖片？點此另開視窗觀看
+                            🔍 另開視窗觀看圖片
                           </a>
                         </div>
                       ) : (
@@ -805,10 +803,8 @@
                           );
                         })}
                       </div>
-
                     </div>
                   )}
-
                 </div>
               )}
 
@@ -881,7 +877,7 @@
             </div>
           )}
 
-          {/* ================= 教師管理後台 ================= */}
+          {/* ================= 👨‍🏫 教師管理後台 ================= */}
           {userRole === 'teacher_admin' && (
             <div className="max-w-6xl mx-auto bg-white p-4 md:p-6 rounded-2xl shadow-xl border border-slate-200">
               <div className="flex justify-between items-center mb-6 pb-2 border-b">
@@ -889,7 +885,8 @@
                 <button onClick={() => setUserRole('login')} className="text-xs bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-lg font-bold text-slate-600">退出登入</button>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              {/* 雲端開關控制 */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                 <div className="p-4 bg-amber-50 rounded-xl border border-amber-200 flex items-center justify-between">
                   <div>
                     <h4 className="font-black text-amber-800 text-sm">3-6 無脊椎動物 主題開關</h4>
@@ -910,9 +907,10 @@
                 <button onClick={saveConfigToFirebase} className="bg-emerald-600 text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-emerald-700 shadow transition">💾 儲存並發布雲端開關狀態</button>
               </div>
 
+              {/* 🔍 頂部共享篩選控制列 */}
               <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                 <div className="flex items-center gap-3 w-full md:w-auto">
-                  <label className="text-xs font-black text-slate-600 whitespace-nowrap">🔍 依班級分類顯示：</label>
+                  <label className="text-xs font-black text-slate-600 whitespace-nowrap">🔍 班級篩選：</label>
                   <select value={teacherSelectClass} onChange={e => setTeacherSelectClass(e.target.value)} className="border p-2 rounded-lg bg-white font-bold text-sm text-slate-700 outline-none focus:border-emerald-500 min-w-[150px]">
                     <option value="ALL">✨ 顯示所有班級</option>
                     {CLASS_OPTIONS.map(c => <option key={c} value={c}>{c} 班</option>)}
@@ -921,35 +919,60 @@
                 <button onClick={() => setRefreshTrigger(p => p+1)} className="bg-slate-600 text-white text-xs font-bold px-3 py-2 rounded-lg hover:bg-slate-700 transition">🔄 重新整理資料</button>
               </div>
 
+              {/* 🗂️ 核心改造：無脊椎 vs 脊椎主題頁籤切換器 */}
+              <div className="flex border-b border-slate-200 mb-4 font-bold text-sm">
+                <button 
+                  onClick={() => setTeacherTab('invert_scores')}
+                  className={`px-6 py-2.5 border-b-2 transition ${teacherTab === 'invert_scores' ? 'border-amber-500 text-amber-600 bg-amber-50/30' : 'border-transparent text-slate-400 hover:text-slate-600'}`}
+                >
+                  🪼 無脊椎動物分數榜 ({studentScores.filter(s => s.chapterName === '無脊椎動物').length} 筆)
+                </button>
+                <button 
+                  onClick={() => setTeacherTab('vert_scores')}
+                  className={`px-6 py-2.5 border-b-2 transition ${teacherTab === 'vert_scores' ? 'border-blue-500 text-blue-600 bg-blue-50/30' : 'border-transparent text-slate-400 hover:text-slate-600'}`}
+                >
+                  🐟 脊椎動物分數榜 ({studentScores.filter(s => s.chapterName === '脊椎動物').length} 筆)
+                </button>
+              </div>
+
+              {/* 📈 數據呈現看板 */}
               <div>
-                <h2 className="text-sm font-black text-slate-600 mb-3">📈 學生交卷即時看板 (支援重複練習，可查看最高分)</h2>
+                <p className="text-xs text-slate-400 mb-2">💡 提示：下方僅列出已正式交卷的紀錄。若學生重複挑戰，此處會保留其歷次挑戰的成績，方便老師採計最高分。</p>
                 <div className="border border-slate-200 rounded-xl overflow-hidden shadow-inner bg-slate-50">
                   <table className="w-full text-left border-collapse text-xs md:text-sm">
                     <thead>
                       <tr className="bg-slate-100 border-b border-slate-200 text-slate-500 font-bold">
-                        <th className="p-3">單元</th>
+                        <th className="p-3">項目單元</th>
                         <th className="p-3">班級</th>
                         <th className="p-3">座號</th>
                         <th className="p-3">姓名</th>
-                        <th className="p-3">配對分</th>
-                        <th className="p-3">測驗分</th>
-                        <th className="p-3 bg-emerald-50/50">總成績</th>
-                        <th className="p-3">交卷時間</th>
+                        <th className="p-3">配對實作分 (60%)</th>
+                        <th className="p-3">測驗得分 (40%)</th>
+                        <th className="p-3 bg-emerald-50/60 text-emerald-800">總分數</th>
+                        <th className="p-3">學生交卷時間</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y bg-white">
                       {filteredScores.length === 0 ? (
-                        <tr><td colSpan="8" className="p-8 text-center text-slate-400 font-bold">🪹 目前尚無符合此班級的學生交卷資料。</td></tr>
+                        <tr>
+                          <td colSpan="8" className="p-12 text-center text-slate-400 font-bold">
+                            🪹 目前該分頁或所選班級中，尚無任何學生完成交卷。
+                          </td>
+                        </tr>
                       ) : (
                         filteredScores.map((score) => (
-                          <tr key={score.id} className="hover:bg-slate-50 transition">
-                            <td className="p-3 font-black text-slate-600"><span className="bg-slate-100 px-1.5 py-0.5 rounded">{score.chapterName}</span></td>
-                            <td className="p-3 font-bold text-emerald-600">{score.class}班</td>
-                            <td className="p-3 text-slate-500">{score.seat} 號</td>
-                            <td className="p-3 font-bold">{score.name}</td>
-                            <td className="p-3 text-emerald-600">{score.matchScore} 分</td>
-                            <td className="p-3 text-blue-600">{score.quizScore} 分</td>
-                            <td className="p-3 font-black text-emerald-700 bg-emerald-50/20">{score.totalScore} 分</td>
+                          <tr key={score.id} className="hover:bg-slate-50/80 transition">
+                            <td className="p-3 font-black text-slate-600">
+                              <span className={`px-2 py-0.5 rounded text-[11px] ${score.chapterName === '無脊椎動物' ? 'bg-amber-100 text-amber-800' : 'bg-blue-100 text-blue-800'}`}>
+                                {score.chapterName}
+                              </span>
+                            </td>
+                            <td className="p-3 font-bold text-slate-700">{score.class}班</td>
+                            <td className="p-3 text-slate-500 font-mono">{score.seat} 號</td>
+                            <td className="p-3 font-bold text-slate-900">{score.name}</td>
+                            <td className="p-3 text-emerald-600 font-semibold">{score.matchScore} 分</td>
+                            <td className="p-3 text-blue-600 font-semibold">{score.quizScore} 分</td>
+                            <td className="p-3 font-black text-emerald-700 bg-emerald-50/30 text-base">{score.totalScore} 分</td>
                             <td className="p-3 text-slate-400 font-mono text-[11px]">{score.time}</td>
                           </tr>
                         ))
